@@ -1,4 +1,7 @@
-from flask import Flask,request
+from flask import Flask,request,Response,jsonify
+from peneliti import sasa as sa
+import scholarly,json
+
 app = Flask(__name__)
 
 @app.route('/<gurih>')
@@ -13,3 +16,9 @@ def show_post(post_id):
 @app.route('/crot', methods=['POST'])
 def login():
 	return request.form['anu']
+
+@app.route('/peneliti/afiliasi/<kental>',methods=['GET'])
+def coba(kental):
+	data =  sa.search(kental)
+	return jsonify(data)
+
