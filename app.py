@@ -1,5 +1,6 @@
 from flask import Flask,request,Response,jsonify
-from peneliti import sasa as sa
+from peneliti import sasa as sa 
+from peneliti import sasa as aww
 import scholarly,json
 
 app = Flask(__name__)
@@ -22,3 +23,7 @@ def coba(kental):
 	data =  sa.search(kental)
 	return jsonify(data)
 
+@app.route('/peneliti/afiliasi/<kental>',methods=['GET'])
+def geulis(kental):
+	data =  aww.search(kental)
+	return jsonify(data)
