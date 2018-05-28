@@ -20,10 +20,9 @@ def login():
 
 @app.route('/peneliti/afiliasi/<kental>',methods=['GET'])
 def coba(kental):
-	data =  sa.search(kental)
-	return jsonify(data)
+	return str(sa.search(kental))
 
-@app.route('/peneliti/afiliasi/<kental>',methods=['GET'])
-def geulis(kental):
-	data =  aww.search(kental)
-	return jsonify(data)
+# @app.route('/peneliti/afiliasi/<kental>',methods=['GET'])
+# def geulis(kental):
+# 	data =  aww.search(kental)
+# 	return jsonify(data)
