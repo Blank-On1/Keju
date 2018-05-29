@@ -5,8 +5,11 @@ def world():
 # Define a variable
 shark = "Sammy"
 
-# Call function
-hello.world()
 
-# Print variable
-print(hello.shark)
+# # Define a class
+# class Octopus:
+#     def __init__(self, name, color):
+#         self.color = color
+#         self.name = name
+
+
