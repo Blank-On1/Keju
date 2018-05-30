@@ -7,3 +7,6 @@ shark = "Sammy"
 
 # Call function
 hello.world()
+
+# Print variable
+print(hello.shark)
