@@ -4,3 +4,6 @@ def world():
 
 # Define a variable
 shark = "Sammy"
+
+# Call function
+hello.world()
