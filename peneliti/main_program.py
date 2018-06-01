@@ -14,3 +14,6 @@ jesse.tell_me_about_the_octopus()
 
 # import sys
 # sys.path.append('/usr/sammy/')
+
+# import hello
+# ...
