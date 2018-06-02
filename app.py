@@ -1,9 +1,28 @@
 from flask import Flask,request,Response,jsonify
+from flaskext.mysql import MySQL
 from peneliti import sasa as sa 
 from peneliti import sasa as aww
 import scholarly,json
 
 app = Flask(__name__)
+mysql = MySQL()
+
+# MySQL configurations
+app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_PASSWORD'] = ''
+app.config['MYSQL_DATABASE_DB'] = 'latihan'
+app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+
+mysql.init_app(app)
+
+@app.route('/a')
+def get():
+    cur = mysql.connect().cursor()
+    cur.execute('''select * from latihan.coba''')
+    r = [dict((cur.description[i][0], value)
+              for i, value in enumerate(row)) for row in cur.fetchall()]
+    return jsonify({'myCollection' : r})
+
 
 @app.route('/<gurih>')
 def hello_world(gurih):
@@ -27,4 +46,5 @@ def coba(kental):
 # def geulis(kental):
 # 	data =  aww.search(kental)
 # 	return jsonify(data)
+
 
