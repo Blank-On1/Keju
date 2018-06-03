@@ -2,15 +2,18 @@
 import hello
 
 
-# Call function
-hello.world()
+# # Call function
+# hello.world()
 
-# Print variable
-print(hello.shark)
+# # Print variable
+# print(hello.shark)
 
-# Call class
-jesse = hello.Octopus("Jesse", "orange")
-jesse.tell_me_about_the_octopus()
+# # Print variable
+# print(hello.fish)
+
+# # Call class
+# jesse = hello.Octopus("Jesse", "orange")
+# jesse.tell_me_about_the_octopus()
 
 
 #
